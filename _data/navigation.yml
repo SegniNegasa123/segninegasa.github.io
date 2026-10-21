@@ -1,0 +1,24 @@
+# Global Site Navigation Configuration
+- title: Home
+  url: /
+  permalink: /
+
+- title: Projects
+  url: /projects/
+  permalink: /projects/
+
+- title: Publications
+  url: /publications/
+  permalink: /publications/
+
+- title: Teaching
+  url: /teaching/
+  permalink: /teaching/
+
+- title: Repositories
+  url: /repositories/
+  permalink: /repositories/
+
+- title: CV
+  url: /cv/
+  permalink: /cv/

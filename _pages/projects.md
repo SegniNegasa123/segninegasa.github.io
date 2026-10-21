@@ -1,10 +1,10 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
 description: Technical portfolio spanning multimodal AI systems, civic software engineering, and verified credentials.
 nav: true
-nav_order: 3
+nav_order: 2
 display_categories: [research, software, engineering, credentials, achievements]
 horizontal: false
 ---
