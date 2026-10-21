@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Technical portfolio spanning multimodal AI systems, civic software engineering, and verified credentials.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [research, software, engineering, credentials, achievements]
 horizontal: false
 ---
 

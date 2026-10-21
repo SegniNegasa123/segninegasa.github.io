@@ -59,7 +59,7 @@ latest_posts:
         <i class="fa-solid fa-layer-group"></i>
         <span>View Research &amp; Publications</span>
       </a>
-      <a href="#" class="dossier-btn-secondary" onclick="event.preventDefault(); alert('CV link will be updated shortly.');">
+      <a href="{{ '/assets/pdf/resume.pdf' | relative_url }}" class="dossier-btn-secondary" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-file-arrow-down"></i>
         <span>Download CV</span>
       </a>
