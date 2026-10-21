@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://segninegasa.github.io/al-folio/sitemap.xml
+Sitemap: https://segninegasa.github.io/sitemap.xml
