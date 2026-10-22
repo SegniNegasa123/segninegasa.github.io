@@ -10,3 +10,5 @@ description: Curriculum Vitae of Segni Seyoum Negasa — AI Researcher & Full-St
 toc:
   sidebar: left
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/dossier.css' | relative_url }}">

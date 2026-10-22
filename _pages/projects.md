@@ -9,6 +9,8 @@ display_categories: [research, software, engineering, credentials, achievements]
 horizontal: false
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/dossier.css' | relative_url }}">
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
