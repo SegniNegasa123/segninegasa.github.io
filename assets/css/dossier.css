@@ -6,28 +6,69 @@
    ========================================================================== */
 
 :root {
+  /* Brand Palettes */
   --sn-navy: #02272F;
   --sn-navy-dark: #01181D;
   --sn-navy-light: #064552;
   --sn-navy-rgb: 2, 39, 47;
+
   --sn-orange: #F15A24;
   --sn-orange-hover: #d44a19;
-  --sn-orange-glow: rgba(241, 90, 36, 0.4);
-  --sn-orange-subtle: rgba(241, 90, 36, 0.12);
-  --sn-border: rgba(2, 39, 47, 0.16);
-  --sn-surface: rgba(2, 39, 47, 0.03);
-  --sn-surface-card: #ffffff;
+  --sn-orange-glow: rgba(241, 90, 36, 0.25);
+  --sn-orange-subtle: rgba(241, 90, 36, 0.08);
+
+  /* Light Executive Theme Defaults */
+  --sn-bg: #FAFAFA;
+  --sn-surface: #FFFFFF;
+  --sn-surface-card: #FFFFFF;
+  --sn-border: rgba(2, 39, 47, 0.08);
+  --sn-border-subtle: rgba(2, 39, 47, 0.05);
+  --sn-shadow-sm: 0 2px 8px rgba(2, 39, 47, 0.04);
+  --sn-shadow-md: 0 6px 20px rgba(2, 39, 47, 0.06);
+  --sn-shadow-lg: 0 12px 32px rgba(2, 39, 47, 0.08);
+
   --sn-text-main: #02272F;
-  --sn-text-muted: #3f5d64;
+  --sn-text-muted: #3D5B62;
+  --sn-text-light: #68858C;
+
   --sn-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+  /* Global al-folio Variable Overrides */
+  --global-bg-color: #FAFAFA !important;
+  --global-card-bg-color: #FFFFFF !important;
+  --global-text-color: #02272F !important;
+  --global-text-color-light: #3D5B62 !important;
+  --global-theme-color: #F15A24 !important;
+  --global-hover-color: #d44a19 !important;
+  --global-divider-color: rgba(2, 39, 47, 0.08) !important;
+  --global-footer-bg-color: #02272F !important;
+  --global-footer-text-color: #FAFAFA !important;
+  --global-footer-link-color: #F15A24 !important;
 }
 
 [data-theme="dark"], html[data-theme="dark"], body.dark {
-  --sn-surface: rgba(2, 39, 47, 0.45);
+  --sn-bg: #01181D;
+  --sn-surface: #02272F;
   --sn-surface-card: #042128;
-  --sn-border: rgba(241, 90, 36, 0.28);
-  --sn-text-main: #f0f7f8;
-  --sn-text-muted: #96b5bc;
+  --sn-border: rgba(241, 90, 36, 0.22);
+  --sn-border-subtle: rgba(241, 90, 36, 0.12);
+  --sn-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --sn-shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+  --sn-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+
+  --sn-text-main: #FAFAFA;
+  --sn-text-muted: #96B5BC;
+  --sn-text-light: #6C8E95;
+
+  --global-bg-color: #01181D !important;
+  --global-card-bg-color: #042128 !important;
+  --global-text-color: #FAFAFA !important;
+  --global-text-color-light: #96B5BC !important;
+  --global-theme-color: #F15A24 !important;
+  --global-hover-color: #ff7847 !important;
+  --global-divider-color: rgba(241, 90, 36, 0.20) !important;
+  --global-footer-bg-color: #011114 !important;
+  --global-footer-text-color: #FAFAFA !important;
 }
 
 /* Hide duplicate post-header in about layout when custom dossier hero is present */
@@ -519,3 +560,105 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   EXECUTIVE GLOBAL LIGHT THEME POLISH
+   ========================================================================== */
+
+body {
+  background-color: var(--global-bg-color, #FAFAFA) !important;
+  color: var(--global-text-color, #02272F) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Executive Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sn-border) !important;
+  box-shadow: 0 1px 3px rgba(2, 39, 47, 0.03) !important;
+}
+
+.navbar .navbar-brand {
+  color: var(--sn-navy) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: var(--sn-navy) !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: var(--sn-orange) !important;
+}
+
+.navbar .navbar-nav .nav-item.active > .nav-link {
+  color: var(--sn-orange) !important;
+  font-weight: 700 !important;
+}
+
+/* Global Cards & Containers */
+.card, .post .card {
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--sn-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--sn-shadow-sm) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card:hover, .post .card:hover {
+  border-color: rgba(241, 90, 36, 0.35) !important;
+  box-shadow: var(--sn-shadow-md) !important;
+  transform: translateY(-2px);
+}
+
+/* Publications, Bibliography & Buttons */
+.publications ol.bibliography li .links a.btn, .btn {
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--sn-border) !important;
+  color: var(--sn-navy) !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  box-shadow: var(--sn-shadow-sm) !important;
+  transition: all 0.2s ease !important;
+}
+
+.publications ol.bibliography li .links a.btn:hover, .btn:hover {
+  border-color: var(--sn-orange) !important;
+  background-color: var(--sn-orange-subtle) !important;
+  color: var(--sn-orange) !important;
+  transform: translateY(-1px);
+}
+
+abbr.badge, .badge {
+  background-color: var(--sn-orange) !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em;
+}
+
+/* Executive Footer */
+footer.fixed-bottom {
+  background-color: var(--sn-navy) !important;
+  border-top: 1px solid var(--sn-navy-dark) !important;
+}
+
+footer.fixed-bottom .container {
+  color: rgba(250, 250, 250, 0.9) !important;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+footer.fixed-bottom a {
+  color: var(--sn-orange) !important;
+}
+
+footer.fixed-bottom a:hover {
+  color: #FFFFFF !important;
+}
+
